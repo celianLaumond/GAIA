@@ -1,0 +1,75 @@
+body {
+    background-image: url('image/fondbois.png');
+    background-repeat: repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column; /* Ajout de cette ligne pour aligner les éléments en colonne */
+    align-items: center;
+    height: 100vh;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.tavern {
+    poistion: relative;
+    width: 200px; /* ajustez la largeur selon vos besoins */
+    height: auto; /* pour maintenir les proportions de l'image */
+}
+
+.tavern-container {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.game-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+/* boutton centrer les un en desous des autres  */
+button {
+    background-color: #a1bc9c;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 50px; /* Ajout de cette ligne pour ajouter de l'espace entre les boutons */
+
+}
+
+#play-button:hover,
+button:hover {
+
+    background-color: #45a049;
+}
+
+#play-button {
+    background-color: #a1bc9c;
+}
+
+#play-button:hover {
+    border: 2px solid #fff;
+}
+
+#dice {
+    max-width: 140px;
+    height: auto;
+
+    border-radius: 8px;
+}
+
+#dice:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+#timer {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #ffffff;
+}

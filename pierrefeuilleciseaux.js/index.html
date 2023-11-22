@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER CISORS</title>
+    <style>
+        body {
+            background-image: url('../js-mastermind/css/fondbois.png');
+            background-repeat: repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        img {
+            width: 100px; /* Ajustez la taille des images selon vos besoins */
+            height: 100px;
+            cursor: pointer;
+        }
+        button {
+            background-color: #a1bc9c;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-bottom: 50px; /* Ajout de cette ligne pour ajouter de l'espace entre les boutons */
+
+        }
+        label{
+            font-size: 1.5em;
+            color: #ffffff;
+        }
+        .taverner{
+
+            background-color:transparent;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+        .tavern {
+            poistion: relative;
+            width: 200px; /* ajustez la largeur selon vos besoins */
+            height: auto; /* pour maintenir les proportions de l'image */
+        }
+    </style>
+</head>
+<body>
+
+<div class="tavern-container">
+    <img src="GAIA.png" alt="tavern" class="tavern">
+</div>
+<div class="taverner">
+<!-- Choix pour le joueur 1 -->
+<label for="joueur1">Joueur 1 :</label>
+    <br>
+    <div class="mine">
+<img src="roc.png" alt="pierre" onclick="choisir('joueur1', 'pierre')">
+<img src="papier.png" alt="feuille" onclick="choisir('joueur1', 'feuille')">
+<img src="ciseaux.png" alt="ciseaux" onclick="choisir('joueur1', 'ciseaux')">
+    </div>
+<br><br>
+
+<!-- Choix pour le joueur 2 -->
+<label for="joueur2">Joueur 2 :</label>
+    <br>
+    <div class="mine">
+<img src="roc.png" alt="pierre" onclick="choisir('joueur2', 'pierre')">
+<img src="papier.png" alt="feuille" onclick="choisir('joueur2', 'feuille')">
+<img src="ciseaux.png" alt="ciseaux" onclick="choisir('joueur2', 'ciseaux')">
+</div>
+<br><br>
+
+</div>
+<!-- Bouton pour jouer -->
+<button onclick="jouer()">Jouer</button>
+
+<!-- Div pour afficher les confettis -->
+<div id="confetti-container"></div>
+
+<!-- Confetti-js Library via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.1/dist/confetti.browser.min.js"></script>
+
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+<button onclick="goBack()">Home</button>
+
+<!-- Fichier JavaScript externe -->
+<script src="pierrefeuille%20ciseau.js"></script>
+
+
+
+</body>
+</html>
+
